@@ -1,1 +1,106 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recall.Space</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Orbitron', sans-serif;
+                background-color: #000;
+                color: #fff;
+                overflow: hidden;
+            }
+            .center-message {
+                font-size: 4em;
+                opacity: 0;
+                animation: fadeIn 1s forwards; /* Reduced from 2s to 1s */
+                text-align: center;
+            }
+            .yellow-dot {  
+                color: #FFAA1D;  
+                font-size: 1.5em;
+            }
+            .links {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .links a {
+                color: #FFAA1D;
+                text-decoration: none;
+                font-size: 1.5em;
+                margin: 0 10px;
+                opacity: 0;
+                display: inline-block;
+                transform: translateX(100%);
+                animation: slideIn 0.5s forwards; /* Reduced from 1s to 0.5s */
+            }
+            .links a:nth-child(1) {
+                animation-delay: 1s; /* Reduced delay */
+            }
+            .links a:nth-child(2) {
+                animation-delay: 1.25s; /* Reduced delay */
+            }
+            .links a:hover {
+                text-decoration: underline;
+            }
+            footer {
+                margin-top: 20px;
+                text-align: center;
+            }
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes slideIn {
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @media (max-width: 768px) {
+                .center-message {
+                    font-size: 3em;
+                }
+                .links a {
+                    font-size: 1.2em;
+                    display: block;
+                    margin: 10px 0;
+                    transform: translateX(0);
+                    animation: fadeIn 0.5s forwards; /* Reduced from 1s to 0.5s */
+                }
+                .links a:nth-child(1) {
+                    animation-delay: 0s;
+                }
+            }
+            @media (max-width: 480px) {
+                .center-message {
+                    font-size: 2em;
+                }
+                .links a {
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="center-message">Recall<span class="yellow-dot">.</span>Space</div>
+    <div class="links">
+        <a href="manifesto.html">🦉Manifesto</a>
+    </div>
+    <footer class="text-center mt-4">
+        <p>Step closer to AGI</p>
+    </footer>
+</body>
+</html>
